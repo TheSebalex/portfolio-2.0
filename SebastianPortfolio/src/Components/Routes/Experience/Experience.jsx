@@ -5,7 +5,7 @@ export function Experience() {
 
   return (
     <>
-      <div className="w-full h-[80vh]">
+      <div className="w-full h-[85vh]">
         <section className="h-full p-4 lg:p-8 lg:px-12 font-mono w-full overflow-y-auto">
           <h1 className="text-3xl font-black mt-2 ml-4 flex gap-4 items-center">
             Experiencia laboral

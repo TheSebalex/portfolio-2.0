@@ -6,7 +6,8 @@ export default {
     extend: {
       gridTemplateColumns: {
         // Simple 16 row grid
-        'two': '20% 80%',
+        'two-sm': '15% 85%',
+        'two-lg': '20% 80%',
       },
       colors: {
         'blackblack': '#141419',

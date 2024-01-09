@@ -5,13 +5,13 @@ import { Header } from "./Header.jsx"
 export function Layout({ children }) {
   return (
     <>
-    <div className="grid grid-cols-two max-w-screen max-h-screen">
+    <div className="grid grid-cols-two-sm lg:grid-cols-two-lg max-w-screen max-h-screen">
       <MenuNav />
       <div className="w-full m-0 min-h-screen max-h-screen">
-        <div className="h-[20vh]">
+        <div className="h-[15vh]">
 				<Header />
         </div>
-        <div className="h-[80vh]">{children}</div>
+        <div className="h-[85vh]">{children}</div>
       </div>
     </div>
     </>

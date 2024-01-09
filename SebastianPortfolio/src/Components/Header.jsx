@@ -5,7 +5,7 @@ import { useNavigate, useMatch, Link } from "react-router-dom";
 export function Header() {
   return (
     <>
-      <header className="h-full bg-blackpurple flex gap-6">
+      <header className="h-full px-2 bg-blackpurple flex gap-6">
         <div className="flex justify-center items-center md:pl-[10%] pl-[5%]">
           <img
             className="h-[80%] max-w-[30vw] max-h-[30vw] border-[1px] border-black aspect-square object-cover rounded-full"
