@@ -5,11 +5,13 @@ import { Header } from "./Header.jsx"
 export function Layout({ children }) {
   return (
     <>
-    <div className="flex w-full">
+    <div className="grid grid-cols-two max-w-screen max-h-screen">
       <MenuNav />
       <div className="w-full m-0 min-h-screen max-h-screen">
+        <div className="h-[20vh]">
 				<Header />
-        <div>{children}</div>
+        </div>
+        <div className="h-[80vh]">{children}</div>
       </div>
     </div>
     </>
@@ -29,8 +31,8 @@ export function MenuNav() {
 
   return (
     <>
-      <aside className="relative min-h-screen h-full bg-blackblack min-w-[15vw] lg:min-w-[20vw]">
-        <nav className="h-full">
+      <aside className="relative min-h-screen h-full bg-blackblack min-w-[15%] lg:min-w-[20%]">
+        <nav>
           <ul className="flex flex-col justify-center items-center m-auto mt-6">
             {menuButtons.map((item, index) => (
               <li key={index} className="w-full my-2">

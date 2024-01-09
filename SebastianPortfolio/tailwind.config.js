@@ -4,6 +4,10 @@ export default {
   theme: {
     
     extend: {
+      gridTemplateColumns: {
+        // Simple 16 row grid
+        'two': '20% 80%',
+      },
       colors: {
         'blackblack': '#141419',
         'blackpurple': '#282837',
