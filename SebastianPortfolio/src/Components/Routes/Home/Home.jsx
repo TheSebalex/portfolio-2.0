@@ -57,8 +57,8 @@ export function TecnologyCard({ item }) {
             src={item.img}
           />
         </div>
-        <div className="h-[40%] flex justify-center items-center">
-          <h2 className="text-lg font-black text-blackpurple">{item.name}</h2>
+        <div className="h-[40%] w-full flex justify-center items-center text-center truncate">
+          <h2 className="w-full text-lg font-black text-blackpurple leading-none">{item.name}</h2>
         </div>
       </div>
     </>
