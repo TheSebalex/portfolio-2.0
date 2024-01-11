@@ -1,7 +1,8 @@
 import React from "react";
+import { jobs } from "./Jobs";
 
 export function Experience() {
-  const jobs = [{}, {}, {}, {}, {}];
+
 
   return (
     <>
@@ -29,8 +30,33 @@ export function Experience() {
               con las tendencias y buenas prácticas del sector.
             </p>
           </div>
+          <ul className="flex flex-col gap-5 my-10">
+            {jobs.map((item, index) => (<li>
+              <JobItem info={item}/>
+            </li>))}
+          </ul>
         </section>
       </div>
     </>
   );
+}
+
+export function JobItem({info}){
+  
+  return (<>
+    <div className="gap-2 flex flex-col bg-gradient-to-tr from-cyan-200/70 to-sky-500/50 shadow-lg p-5 rounded-xl">
+      <h1 className="lg:flex grid grid-cols-2 gap-4 ml-2 text-lg font-black break-words">
+        {info.title}
+        <span className="break-words italic my-auto py-2 justify-center text-center leading-none font-medium font-mono bg-sky-600 text-white font rounded-lg px-2">
+          {info.site}
+        </span>
+      </h1>
+      <h2 className="text-md italic p-[1px] px-[5px] bg-slate-600 text-white rounded-lg flex w-auto m-auto ml-0">
+        {info.act}
+      </h2>
+      <p className="font-sans">
+        {info.desc}
+      </p>
+    </div>
+</>)
 }
