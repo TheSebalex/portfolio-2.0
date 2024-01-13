@@ -58,7 +58,7 @@ export function MenuNav() {
                 />
               </li>
             ))}
-            <li className="w-full bottom-5 absolute mt-auto mb-0 mt-auto mb-2">
+            <li className="w-full bottom-5 absolute mb-2">
               <LinkButton
                 text={<p className="hidden lg:block">Contacto</p>}
                 route={"/contact"}

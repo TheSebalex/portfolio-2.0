@@ -1,7 +1,7 @@
 export const jobs = [
     {
       title: "Analista de Desarrollo",
-      site: "KLK Sistemas C.A.",
+      site: "Freelance",
       act: "SQL Server || Visual Basic || C#",
       desc: "Desarrollo y mantenimientos de sistemas POS / Retail, atentiendo requerimientos de clientes e incidencias, utilizando tecnologias principalmente del Framework .NET",
     },

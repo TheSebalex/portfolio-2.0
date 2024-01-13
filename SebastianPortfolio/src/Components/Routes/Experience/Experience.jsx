@@ -44,10 +44,10 @@ export function Experience() {
 export function JobItem({info}){
   
   return (<>
-    <div className="gap-2 flex flex-col bg-gradient-to-tr from-cyan-200/70 to-sky-500/50 shadow-lg p-5 rounded-xl">
+    <div className="gap-2 flex flex-col bg-gradient-to-tr from-cyan-200/70 to-sky-500/50 p-5 rounded-xl">
       <h1 className="lg:flex grid grid-cols-2 gap-4 ml-2 text-lg font-black break-words">
         {info.title}
-        <span className="break-words italic my-auto py-2 justify-center text-center leading-none font-medium font-mono bg-sky-600 text-white font rounded-lg px-2">
+        <span className="break-words italic my-auto   py-2 justify-center text-center leading-none font-medium font-mono bg-sky-600 text-white font rounded-lg px-2">
           {info.site}
         </span>
       </h1>

@@ -1,22 +1,7 @@
 import React, { useRef } from "react";
+import { tecnologies } from "./Tecnologies";
 
 export function Home() {
-  const tecnologies = [
-    { img: "https://i.postimg.cc/LskvXbkM/pngegg-2.png", name: "HTML5" },
-    { img: "https://i.postimg.cc/R08fv1yz/pngegg-5.png", name: "CSS3" },
-    { img: "https://i.postimg.cc/qqKxPDvY/pngegg-4.png", name: "Javascript" },
-    { img: "https://i.postimg.cc/6p2m1rCC/image.png", name: "React.js" },
-    {
-      img: "https://i.postimg.cc/252mpyMG/tailwind-css-icon.png",
-      name: "TailwindCSS",
-    },
-    { img: "https://i.postimg.cc/tg5RX2Zh/pngegg.png", name: "Node.js" },
-    { img: "https://i.postimg.cc/PNn8pSTJ/pngegg-10.png", name: "Express.js" },
-    { img: "https://i.postimg.cc/K8V9KTgm/pngegg-7.png", name: "VBA.NET" },
-    { img: "https://i.postimg.cc/KvCpC3rk/pngegg-8.png", name: "C#.NET" },
-    { img: "https://i.postimg.cc/bN25PL5q/pngegg-6.png", name: "SQL Server" },
-    { img: "https://i.postimg.cc/ydzyTFKB/pngegg-9.png", name: "Git" },
-  ];
 
   const ulRef = useRef("");
 
@@ -26,13 +11,12 @@ export function Home() {
     const viewerElements = childs.filter((child) => {
       const {left:leftChild, right:rightChild} = child.getBoundingClientRect()
       return (
-        leftChild < right &&
-        rightChild > left
+        leftChild > left &&
+        rightChild < right
       );
     });
 
-    let objective = Math.round((viewerElements.length - 1) / 2);
-
+    let objective = Math.round((viewerElements.length-1) / 2);
     for (let i in childs) {
       if (childs[i] == viewerElements[objective]) {
         if (childs[parseInt(i) + parseInt(dir)]) {
@@ -64,21 +48,23 @@ export function Home() {
             Tecnologías
             <box-icon name="laptop"></box-icon>
           </h1>
-          <div className="flex justify-center items-center">
+          <div className="flex gap-2 justify-center items-center">
             <div
               onClick={() => {
                 moveScrollUl(-1);
               }}
               className="md:hidden"
             >
-              <box-icon name="left-arrow" color="#29abe2"></box-icon>
+              <div className="hover:scale-150 transition-all">
+              <box-icon name='chevron-left' ></box-icon>
+              </div>
             </div>
             <ul
               ref={ulRef}
-              className="scroll-smooth px-8 md:justify-center mt-10 gap-6 flex overflow-x-auto md:flex-wrap scrollbar w-full pb-8"
+              className="snap-x scroll-smooth px-8 md:justify-center mt-10 gap-6 flex overflow-x-auto md:flex-wrap scrollbar w-full pb-8"
             >
               {tecnologies.map((item, index) => (
-                <li key={index}>
+                <li className="snap-center" key={index}>
                   <TecnologyCard item={item} />
                 </li>
               ))}
@@ -89,7 +75,9 @@ export function Home() {
               }}
               className="md:hidden"
             >
-              <box-icon name="right-arrow" color="#29abe2"></box-icon>
+              <div className="hover:scale-150 transition-all">
+              <box-icon name='chevron-right'></box-icon>
+              </div>
             </div>
           </div>
         </section>
@@ -101,10 +89,10 @@ export function Home() {
 export function TecnologyCard({ item }) {
   return (
     <>
-      <div className="w-[35vw] h-[45vw] max-w-[135px] max-h-[180px] rounded-xl flex flex-col justify-center items-center bg-slate-100 border-[1px] border-slate-200 shadow-lg">
+      <div className="w-[35vw] h-[45vw] max-w-[135px] max-h-[180px] rounded-xl flex flex-col justify-center items-center bg-slate-100 border-[1px] border-slate-200">
         <div className="h-[60%] w-[90%] flex justify-center items-center m-2 rounded-lg">
           <img
-            className="object-contain w-[80%] h-[90%] drop-shadow-md"
+            className="object-contain w-[80%] h-[90%]"
             src={item.img}
           />
         </div>
