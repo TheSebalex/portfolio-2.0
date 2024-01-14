@@ -16,4 +16,7 @@
       border-radius: 100vh;
       background: #29aae2c4;
     }
+    .scrollbar-none::-webkit-scrollbar {
+      display: none;
+    }
   }

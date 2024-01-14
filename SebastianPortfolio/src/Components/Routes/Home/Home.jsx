@@ -31,7 +31,7 @@ export function Home() {
   return (
     <>
       <div className="w-full h-[85vh]">
-        <section className="h-full p-4 lg:p-8 lg:px-12 font-mono w-full overflow-y-auto pb-10">
+        <section className="h-full bg-white p-4 lg:p-8 lg:px-12 font-mono w-full overflow-y-auto pb-10">
           <h1 className="text-3xl font-black mt-2 ml-4 flex gap-4 items-center">
             Sobre mi
             <box-icon name="mouse-alt" color="black" size="24px"></box-icon>
@@ -89,10 +89,10 @@ export function Home() {
 export function TecnologyCard({ item }) {
   return (
     <>
-      <div className="w-[35vw] h-[45vw] max-w-[135px] max-h-[180px] rounded-xl flex flex-col justify-center items-center bg-slate-100 border-[1px] border-slate-200">
+      <div className="w-[35vw] h-[45vw] max-w-[135px] max-h-[180px] rounded-xl flex flex-col justify-center items-center bg-gradient-to-tr from-gray-50 to-slate-300 border-[1px] drop-shadow-md border-zinc-200">
         <div className="h-[60%] w-[90%] flex justify-center items-center m-2 rounded-lg">
           <img
-            className="object-contain w-[80%] h-[90%]"
+            className="object-contain w-[80%] h-[90%] drop-shadow-md"
             src={item.img}
           />
         </div>

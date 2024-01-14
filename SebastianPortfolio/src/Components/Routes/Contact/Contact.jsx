@@ -1,13 +1,14 @@
+import { useState } from "react";
 export function Contact() {
   return (
     <>
       <div className="w-full h-[85vh]">
-        <section className="h-full p-4 lg:p-8 lg:px-12 font-mono w-full overflow-y-auto">
+        <section className=" bg-white h-full p-4 lg:p-8 lg:px-12 font-mono w-full overflow-y-auto">
           <h1 className="text-3xl font-black mt-2 ml-4 flex gap-4 items-center">
             Contacto
-            <box-icon name="mouse-alt" color="black" size="24px"></box-icon>
+            <box-icon name='user'></box-icon>
           </h1>
-          <p>Puedes contactarme por los siguientes, medios:</p>
+          <p className="text-lg mt-2 ml-2 font-mono">Puedes contactarme por los siguientes, medios:</p>
           <div className="my-16 flex justify-center flex-wrap gap-8">
             <ContactCard
               text={"Github"}
@@ -32,19 +33,28 @@ export function Contact() {
 }
 
 export function ContactCard({ icon, css, imgcss, form, link, text }) {
+  const [displayForm, setDisplayForm] = useState(false);
+    const handleClick = ()=>{
+        if(link){
+            window.location.href
+        } else {
+            
+        }
+    }
+
   return (
     <>
       <div
         className={`${
           css && css
-        } min-w-[180px] min-h-[220px] max-h-[300px] max-w-[250px] w-[15vw] flex flex-col rounded-xl border-[1px] overflow-hidden h-[20vw] border-slate-200 bg-slate-100 relative`}
+        } drop-shadow-md min-w-[180px] min-h-[220px] max-h-[300px] max-w-[250px] w-[15vw] flex flex-col rounded-xl border-[1px] overflow-hidden h-[20vw] border-zinc-200 bg-gradient-to-tr from-gray-50 to-slate-300 relative`}
       >
         <img src={icon && icon} className={`mx-auto ${imgcss && imgcss}`} />
         <p className="absolute bottom-[20%] left-0 right-0 text-center text-lg">
           {text && text}
         </p>
         <div className="absolute bottom-[10%] text-center left-0 right-0">
-          <button className="bg-blueActive px-2 text-white rounded-lg">
+          <button onClick={handleClick} className="bg-blueActive px-2 text-white rounded-lg">
             Contactar!
           </button>
         </div>
@@ -55,7 +65,7 @@ export function ContactCard({ icon, css, imgcss, form, link, text }) {
 }
 
 export function Form() {
-  return <></>;
+  return (<></>);
 }
 
 //<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSedS3Wc1aFiLM_1QJ2M0C5WggwARCGkvW_EBQPzvuDZIXggkA/viewform?embedded=true" width="640" height="824" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>

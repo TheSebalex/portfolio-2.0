@@ -13,8 +13,8 @@ export default {
         'blackblack': '#141419',
         'blackpurple': '#282837',
         'blueActive': '#29abe2',
-        'white': '#fff'
-      }
+        'white': '#fafbfd'
+      },
     },
   },
   plugins: [],
